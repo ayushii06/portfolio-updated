@@ -1,4 +1,5 @@
 import photo from './public/photo.png'
+import TimeLine from './components/timeline';
 import Card from './components/card';
 import Image from 'next/image';
 import C from './public/skills/c.svg'
@@ -29,14 +30,14 @@ import arrow from './public/arrow.png'
 export default function Home() {
   return (
     <>
-      <div className="flex gap-2 items-center px-28 py-4  justify-center text-white">
-        <div className="">
+      <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-2 items-center px-8 md:px-28 py-4  justify-center text-white">
+        <div className="md:text-left text-center">
           <p className="text-6xl font-bold">Hi ,</p>
           <p className="text-6xl font-bold my-4">I’m <span className="text-gradient1" >Ayushi Pal ,</span> </p>
         
-        <div className="text-center text-gradient2 font-semibold w-8/12 text-3xl my-8 border-2 border-solid	px-6 py-3">MERN STACK DEVELOPER</div>
-        <p className="w-9/12 text-xl text-slate-300">Technology Enthusiast with a strong interest in building scalable and efficient web applications</p>
-        <button className="my-6 text-center w-5/12 gradient-btn px-2 py-3 text-xl font-bold">Download Resume</button>
+        <div className="text-center max-sm:mx-8 md:mx-0 text-gradient2 font-semibold md:w-10/12  text-3xl my-8 border-2 border-solid px-4	md:px-6 py-3">MERN STACK DEVELOPER</div>
+        <p className="w-9/12 py-4 md:py-0 mx-auto md:mx-0 text-xl text-slate-300">Technology Enthusiast with a strong interest in building scalable and efficient web applications</p>
+        <button className="my-6 mx-auto md:mx-0 text-center w-7/12 gradient-btn px-2 py-3 text-xl font-bold">Download Resume</button>
         </div>
         <div className="">
           <Image className="" src={photo} />
@@ -44,52 +45,18 @@ export default function Home() {
       </div>
 
       
-      <p className="text-center py-14 font-medium  px-24 text-white text-2xl">“ Those who are motivated only by the desire for the fruit of action are miserable, for they are constantly anxious about the results of what they do.”</p>
+      <p className="text-xl text-center py-14 font-medium  px-8 md:px-24 text-white text-lg md:text-2xl">“ Those who are motivated only by the desire for the fruit of action are miserable, for they are constantly anxious about the results of what they do.”</p>
 
       <div className="w-7/12 mx-auto">
-      <div className=" flex gap-10 items-center  text-white text-2xl">
-        <p className="">2022-26</p>
-        <div className="h-2/12 w-2/12" style={{'box-shadow':'0px 0px 20px #ff7500','background':'#EC8200' ,'width': '21px' ,'height': '21px' ,
-'border-radius': '50%'}}></div>
-        <p className="">Rajiv Gandhi Institute Of Petroleum Technology , India</p>
-      </div>
-      <div style={{"left":"5rem"}} className="relative left-44 text-slate-100 mx-12 border-l-2 my-6 px-12 w-9/12">
-        <p className=""> B.Tech Computer Science and Design Engineering</p>
-        <p className="py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      </div>
-
-      <div className="flex gap-10 items-center text-white text-2xl">
-        <p className="">2021-22</p>
-        <div className="h-2/12 w-2/12" style={{'box-shadow':'0px 0px 20px #ff7500','background':'#EC8200' ,'width': '21px' ,'height': '21px' ,
-'border-radius': '50%'}}></div>
-        <p className="">Joint Entrance Examination ADVANCED 2022</p>
-      </div>
-      <div style={{"left":"5rem"}} className="relative left-44 text-slate-100 mx-12 border-l-2 my-6 px-12 w-9/12">
-        <p className="">College Entrance Examination , India</p>
-        <p className="py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      </div>
-      
-
-      <div className=" flex gap-10 items-center text-white text-2xl">
-        <p className="">2021-22</p>
-        <div className="h-2/12 w-2/12" style={{'box-shadow':'0px 0px 20px #ff7500','background':'#EC8200' ,'width': '21px' ,'height': '21px' ,
-'border-radius': '50%'}}></div>
-        <p className="">St. Mary’s School </p>
-      </div>
-      <div style={{"left":"5rem"}} className="relative left-44 text-slate-100 mx-12 border-l-2 my-6 px-12 w-9/12">
-        <p className=""> B.Tech Computer Science and Design Engineering</p>
-        <p className="py-4">Senior Secondary and High School Examination. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-      </div>
-      
-
+        <TimeLine/>
       
       </div>
 
-      <p className="text-center py-14 font-medium  px-24 text-white text-2xl">I WRITE CODE | I LOVE DEBUGGING | I DEVELOP WEBSITES | I AM SELF FOCUSED AND HARD-WORKING | </p>
+      <p className="text-center py-14 font-medium px-8 md:px-24 text-white text-lg md:text-2xl">I WRITE CODE | I LOVE DEBUGGING | I DEVELOP WEBSITES | I AM SELF FOCUSED AND HARD-WORKING | </p>
       
-      <div className="px-28 py-12">
-        <p className="text-gradient3 text-3xl font-bold">SKILL SET</p>
-        <div className="flex flex-row gap-6 flex-wrap my-12 items-center">
+      <div className="px-14 md:px-28 py-12">
+        <p className="text-gradient3 text-center md:text-left text-4xl font-bold">SKILL SET</p>
+        <div className="flex justify-center md:justify-start flex-row gap-6 flex-wrap my-12 items-center">
           <Image src={c} width={72} height={72} alt='skill'/>
           <Image src={C} width={72} height={72} alt='skill'/>
           <Image src={web1} width={72} height={72} alt='skill'/>
@@ -113,35 +80,35 @@ export default function Home() {
           <Image src={web19} width={72} height={72} alt='skill'/>
         </div>
       </div>
-      <p className="text-center py-6 font-medium  px-24 text-white text-2xl">
+      <p className="text-center py-6 font-medium px-8 md:px-24 text-white text-lg md:text-2xl">
       DATA STRUCTURES AND ALGORITHMS || C / C++ Programming Language || MERN Stack Development || Leadership and Team Management</p>
       
-      <div className="px-28 py-12">
-      <p className="text-gradient3 text-3xl font-bold">What Services I Bring?</p>
-      <div className="flex gap-12 pt-12">
+      <div className="px-14 md:px-28 py-12">
+      <p className="text-gradient3 text-center md:text-left text-4xl font-bold">What Services I Bring?</p>
+      <div className="flex flex-nowrap max-lg:flex-wrap max-lg:justify-center gap-12 pt-12">
         <Card/>
         <Card/>
       </div>
       </div>
-      <p className="text-center mb-20  border-2 py-4 font-semibold mx-28  px-16 text-white text-2xl">
+      <p className="text-center mb-20  border-2 py-4 font-semibold mx-8 md:mx-28 px-4 md:px-16 text-white text-lg md:text-2xl">
       Responsive and Compatible Design | Customizing Existing Sites | Secured Web Site & Database | Rest API Integration | E-commerce Functionality | Payment Gateways Integration
       </p>
-      <p className="text-gradient3 text-3xl font-bold px-28">Why Me ?</p>
-      <div className="flex gap-6 items-center my-10 px-28">
+      <p className="text-gradient3 text-3xl font-bold px-14 md:px-28">Why Me ?</p>
+      <div className="flex gap-6 items-center my-10 px-14 md:px-28">
         <Image src={arrow} />
-        <p className="font-bold text-2xl text-white">Developed over 9+ projects using Mern Stack framework. </p>
+        <p className="font-bold text-lg md:text-2xl text-white">Developed over 9+ projects using Mern Stack framework. </p>
       </div>
-      <div className="flex gap-6 items-center my-10 px-28">
+      <div className="flex gap-6 items-center my-10 px-14 md:px-28">
         <Image src={arrow} />
-        <p className="font-bold text-2xl text-white">I have over 2+ year of experience in building websites.</p>
+        <p className="font-bold text-lg md:text-2xl text-white">I have over 2+ year of experience in building websites.</p>
       </div>
-      <div className="flex gap-6 items-center my-10 px-28">
+      <div className="flex gap-6 items-center my-10 px-14 md:px-28">
         <Image src={arrow} />
-        <p className="font-bold text-2xl text-white">I deliver solutions that are efficient, scalable, and tailored to the needs of each project.</p>
+        <p className="font-bold text-lg md:text-2xl text-white">I deliver solutions that are efficient, scalable, and tailored to the needs of each project.</p>
       </div>
-      <div className="flex gap-6 items-center my-10 px-28">
+      <div className="flex gap-6 items-center my-10 px-14 md:px-28">
         <Image src={arrow} />
-        <p className="font-bold text-2xl text-white">I can build, maintain, and enhance any web platform.</p>
+        <p className="font-bold text-lg md:text-2xl text-white">I can build, maintain, and enhance any web platform.</p>
       </div>
       <div className="mx-auto text-center  w-8/12">
      <button className="my-6 rounded text-center  bg-white	px-12 py-2 text-xl font-bold">View Projects</button>

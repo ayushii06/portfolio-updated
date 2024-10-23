@@ -1,7 +1,7 @@
 export default function card(){
     return (
         <>
-            <div className="px-12 py-4 border-2 " style={{'background':'rgba(0, 0, 0, 0.26)'}}>
+            <div className="px-8 py-4 border-2 " style={{'background':'rgba(0, 0, 0, 0.26)'}}>
                 <p className=" text-center text-white font-bold text-2xl">I will create MERN stack website for you.</p>
                 <div className="text-slate-200 flex my-6  ">
                     <p className="w-4/12">Frontend : </p>

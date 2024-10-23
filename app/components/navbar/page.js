@@ -5,6 +5,7 @@ import Image from 'next/image'
 import logo from '../../public/logo.png'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import menu from  '../../public/menu.png'
 
 
 function page() {
@@ -31,7 +32,7 @@ function page() {
   return (
     <>
     <div className="text-xl	font-bold	 flex flex-row justify-between text-white p-8">
-        <div className="logo"><Image className="" height="12px" weight="23px" src={logo} /></div>
+        <div className="logo"><Image className="" height={32} weight={32} src={logo} /></div>
         <div className="flex flex-row gap-x-8">
         {links.map((link) => {
         return (
@@ -49,6 +50,9 @@ function page() {
         );
       })}
                   </div>
+        <div className="md:hidden" style={{'width':'6%'}}>
+          <Image src={menu} />
+        </div>
     </div>
     </>
   )
