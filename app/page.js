@@ -2,6 +2,7 @@ import photo from './public/photo.png'
 import TimeLine from './components/timeline';
 import Card from './components/card';
 import Image from 'next/image';
+import Link from 'next/link';
 import C from './public/skills/c.svg'
 import c from './public/skills/c-1.svg'
 import web1 from './public/skills/html.svg'
@@ -24,10 +25,11 @@ import web17 from './public/skills/azure.svg'
 import web18 from './public/skills/mysql.svg'
 import web19 from './public/skills/docker.svg'
 import arrow from './public/arrow.png'
-
+import DownloadButton from './downloadButton'
 
 
 export default function Home() {
+
   return (
     <>
       <div className="flex flex-wrap md:flex-nowrap gap-4 md:gap-2 items-center px-8 md:px-28 py-4  justify-center text-white">
@@ -37,7 +39,7 @@ export default function Home() {
         
         <div className="text-center max-sm:mx-8 md:mx-0 text-gradient2 font-semibold md:w-10/12  text-3xl my-8 border-2 border-solid px-4	md:px-6 py-3">MERN STACK DEVELOPER</div>
         <p className="w-9/12 py-4 md:py-0 mx-auto md:mx-0 text-xl text-slate-300">Technology Enthusiast with a strong interest in building scalable and efficient web applications</p>
-        <button className="my-6 mx-auto md:mx-0 text-center w-7/12 gradient-btn px-2 py-3 text-xl font-bold">Download Resume</button>
+        <DownloadButton/>
         </div>
         <div className="">
           <Image className="" src={photo} />
@@ -111,7 +113,7 @@ export default function Home() {
         <p className="font-bold text-lg md:text-2xl text-white">I can build, maintain, and enhance any web platform.</p>
       </div>
       <div className="mx-auto text-center  w-8/12">
-     <button className="my-6 rounded text-center  bg-white	px-12 py-2 text-xl font-bold">View Projects</button>
+     <Link href='/projects' className="my-6 rounded text-center  bg-white	px-12 py-2 text-xl font-bold">View Projects</Link>
      </div>
      
     </>

@@ -13,33 +13,35 @@ export default function Experience() {
   return (
   
       
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="white">
         {experiencesData.map((item, index) => {
          const { ref, inView } = useInView({ threshold: 0 });
           return (
             <div key={index} ref={ref} className="vertical-timeline-element">
               <VerticalTimelineElement
                 contentStyle={{
-                  background: '#f3f4f6',
-                  boxShadow: 'none',
-                  border: '1px solid rgba(0, 0, 0, 0.05)',
-                  textAlign: 'left',
+                  background: '#76263e42',
+                  boxShadow: '6px 6px 9px #00000096',
+                  border : '6px 6px 9px #00000096',
+                  lineColor: '#76263e42',
+                  textAlign: 'center',
+                  color: '#fff',
                   padding: '1.3rem 2rem',
                 }}
                 contentArrowStyle={{
-                  borderRight: '0.4rem solid #9ca3af',
+                  borderRight:'0.4rem solid #9ca3af'
                 }}
                 visible={inView}
                 date={item.date}
-                icon={item.icon}
+                icon={<img src={item.icon} className='bg-transparent' width={250} height={250} alt={item.title} />}
                 iconStyle={{
-                  background: 'white',
-                  fontSize: '1.5rem',
+                  background: 'none',
+                  boxShadow: 'none',
                 }}
               >
-                <h3 className="font-semibold capitalize">{item.title}</h3>
-                <p className="!mt-0 font-normal">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700">
+                <h3 className="font-bold pb-2 text-xl text-white capitalize">{item.title}</h3>
+                <p className="!mt-0 font-bold text-white">{item.location}</p>
+                <p className="!mt-1 pt-6 text-white">
                   {item.description}
                 </p>
               </VerticalTimelineElement>

@@ -1,5 +1,6 @@
 import star from '../../public/star.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function page() {
@@ -8,11 +9,11 @@ export default function page() {
     <div className="px-6 md:px-28 py-20 ">
      <p className="text-gradient3 text-3xl font-bold ">Follow Me</p>
      <div className="flex flex-wrap my-12 gap-12">
-      <p className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px yellow;"}}>GITHUB</p>
-      <p className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #45C9F8;"}}>LINKEDIN</p>
-      <p className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #F5710B;"}}>LEETCODE</p>
-      <p className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #FFFFFF;"}}>MEDIUM</p>
-      <p className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #00FF00;"}}>X</p>
+      <Link href='https://github.com/ayushii06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px yellow;"}}>GITHUB</Link>
+      <Link href='https://www.linkedin.com/in/ayushi-pal-99965b249/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #45C9F8;"}}>LINKEDIN</Link>
+      <Link href='https://leetcode.com/u/ayushii06/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #F5710B;"}}>LEETCODE</Link>
+      <Link href='https://medium.com/@ayushipal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #FFFFFF;"}}>MEDIUM</Link>
+      <Link href='https://x.com/ayushi_pal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #00FF00;"}}>X</Link>
       </div>
       
       <div className="flex  gap-6 items-center mt-20 ">
@@ -44,12 +45,9 @@ export default function page() {
      <hr className='py-6'/>
 
      <div className="flex text-center max-sm:flex-wrap max-sm:gap-12 justify-evenly max-sm:px-16 px-18">
-        <p className="text-white font-lg">Give Feedback</p>
-        <p className="text-white font-lg">View Projects</p>
-        <p className="text-white font-lg">Hire Me</p>
-        <p className="text-white font-lg">Contact Me</p>
-        <p className="text-white font-lg">Register Now</p>
-        <p className="text-white font-lg">Request Services</p>
+        <Link href='/projects' className="text-white font-lg">View Projects</Link>
+        <p className="text-white font-lg">ayushipal06@gmail.com</p>
+        <Link href='/services' className="text-white font-lg">Request Services</Link>
      </div>
 
      <div className="text-slate-300 text-center pt-12 py-4 italic">© Copyright 2024 Ayushi Pal </div>

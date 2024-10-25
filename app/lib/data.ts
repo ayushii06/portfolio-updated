@@ -7,8 +7,8 @@ const experiencesData = [
     date: '2022-26',
     title: 'Rajiv Gandhi Institute of Petroleum Technology , India',
     location: 'B.Tech in Computer Science and Design Engineering',
-    description: 'Working on the Google Search team.',
-    icon : 'clgpng'
+    description: 'Currenlty pre-final year undergrate student at RGIPT, India.',
+    icon : "https://res.cloudinary.com/drg0umzcb/image/upload/v1729763471/shicoImages/mo9jbdobtalnw9jww70p.png"
 
   },
   {
@@ -16,14 +16,14 @@ const experiencesData = [
     title: 'Joint Entrance Examination (JEE) Advanced',
     location: 'National Level Entrance Examination for IITs',
     description: 'Working on the Google Search team.',
-    icon : 'entrance'
+    icon : 'https://res.cloudinary.com/drg0umzcb/image/upload/v1729763472/shicoImages/sy9kxnhmlrankpwwvc1z.png'
   },
   {
     date: '2008-2022',
     title: 'St. Mary\'s School, India',
     location: 'High School',
     description: 'Working on the Google Search team.',
-    icon : 'school'
+    icon : 'https://res.cloudinary.com/drg0umzcb/image/upload/v1729763536/shicoImages/c3r2svakhmdpzcfjnwad.png'
   },
 
 ];
