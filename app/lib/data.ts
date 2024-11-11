@@ -1,6 +1,3 @@
-import clgpng from '../public/college.png';
-import entrance from '../public/exam.png';
-import school from '../public/school.png';
 
 const experiencesData = [
   {

@@ -9,11 +9,11 @@ export default function page() {
     <div className="px-6 md:px-28 py-20 ">
      <p className="text-gradient3 text-3xl font-bold ">Follow Me</p>
      <div className="flex flex-wrap my-12 gap-12">
-      <Link href='https://github.com/ayushii06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px yellow;"}}>GITHUB</Link>
-      <Link href='https://www.linkedin.com/in/ayushi-pal-99965b249/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #45C9F8;"}}>LINKEDIN</Link>
-      <Link href='https://leetcode.com/u/ayushii06/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #F5710B;"}}>LEETCODE</Link>
-      <Link href='https://medium.com/@ayushipal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #FFFFFF;"}}>MEDIUM</Link>
-      <Link href='https://x.com/ayushi_pal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #00FF00;"}}>X</Link>
+      <Link target='_blank' href='https://github.com/ayushii06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px yellow;"}}>GITHUB</Link>
+      <Link target='_blank' href='https://www.linkedin.com/in/ayushi-pal-99965b249/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #45C9F8;"}}>LINKEDIN</Link>
+      <Link target='_blank' href='https://leetcode.com/u/ayushii06/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #F5710B;"}}>LEETCODE</Link>
+      <Link target='_blank' href='https://medium.com/@ayushipal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #FFFFFF;"}}>MEDIUM</Link>
+      <Link target='_blank' href='https://x.com/ayushi_pal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #00FF00;"}}>X</Link>
       </div>
       
       <div className="flex  gap-6 items-center mt-20 ">

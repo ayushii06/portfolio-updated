@@ -27,7 +27,7 @@ export default function card(){
                     <p className="">₹5,000 - ₹50,000</p>
                 </div>
                 <div className="mx-auto text-center  w-8/12">
-                <button className="my-6 text-center rounded bg-white	px-12 py-2 text-xl font-bold">BOOK NOW</button>
+                <button className="my-6 text-center rounded bg-white	px-12 py-2 text-xl font-bold">ayushipal06@gmail.com</button>
                 </div>
             </div>
         </>
