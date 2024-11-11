@@ -41,12 +41,15 @@ const projectData = [
     },
     {
         id: 3,
-        title: 'Draw&Connect - Collaborative Whiteboard Drawing Tool',
-        desc: 'A collaborative whiteboard drawing tool that allows users to draw together in real-time....read more',
+        title: 'DrawTool - Whiteboard Drawing Tool',
+        desc: 'A whiteboard drawing tool that allows users to draw and work....read more',
         date: '18th August, 2024',
-        image: 'https://res.cloudinary.com/drg0umzcb/image/upload/v1729619621/shicoImages/pojeltuhy634xt8d494t.png',
-        preview: "https://github.com/ayushii06/Draw-Present",
-        img: ["http://res.cloudinary.com/drg0umzcb/image/upload/v1729868446/shicoImages/jeebsafnsvydohyjfagj.png",],
+        image: 'https://i.ibb.co/Pr0bHLq/Screenshot-2024-11-10-171558.png',
+        preview: "https://github.com/ayushii06/drawTool",
+        img: ["https://i.ibb.co/Pr0bHLq/Screenshot-2024-11-10-171558.png",
+            "https://i.ibb.co/kmSgCmx/Screenshot-2024-11-10-172804.png"
+        ],
+        video : ["https://cdn-cf-east.streamable.com/video/mp4/varslm.mp4?Expires=1731583692410&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ&Signature=gfwqei1Voh2u4u239DF9D~TrxhhMy4ef2U8o9mAOAFl87d593ZrAhmkHDqfOJe3VgGIfwWRnuhqPf95hXxFuueyg3o-nwTRj4ppnlt0e6nMhCiwTlLjKOsmyJW72Su0lZZacFAfSrtTf2gUle3bHbHfJJDEkxe-XsPTbEqrzx0oBNDQJQDeaDnm0G9mV2PvcnHgAqdYD1DJNbzBEbu0iuWw3FAJxlbTEmsETMjYd-jC3mFIt38eGZOsbyU6MJVaXYbcV~ndqrtEEeQgpWdMVNugyJ9oxRxlIuKO5Y8lEj07nVbWGyTz-uae7-SZ7~SOLzHWROJtZRpGfyz~SdriuVA__"],
         techStack:"React , Socket.io , WebRTC , Canvas , Node.js , Express.js , JWT , APIs , User-Centric Design , APIs",
 
 
@@ -70,8 +73,6 @@ const projectData = [
 
 
     },
-
-    //   "category": "Lips",
 
 
     {

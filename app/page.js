@@ -83,7 +83,7 @@ export default function Home() {
 
       <p className="text-center py-14 font-medium px-8 md:px-24 text-white text-lg md:text-2xl">I WRITE CODE | I LOVE DEBUGGING | I DEVELOP WEBSITES | I AM SELF FOCUSED AND HARD-WORKING | </p>
 
-      <div className="px-14 md:px-28 py-12">
+      <div className="px-4 md:px-28 py-8">
         <p className="text-gradient3 text-center md:text-left text-4xl font-bold">SKILL SET</p>
         <div className="flex justify-center md:justify-start flex-row gap-6 flex-wrap my-12 items-center">
           <div className="hover:shadow-lg hover:shadow-gray-400 cursor-pointer transition duration-500 hover:scale-110 flex flex-col justify-center md:justify-start gap-6 flex-wrap my-2 items-center border-white border-opacity-75  border-2 px-6 w-22 py-6 ">
@@ -196,12 +196,12 @@ export default function Home() {
       </div>
 
 
-      <p className="text-center py-6 font-medium px-8 md:px-24 text-white text-lg md:text-2xl">
+      <p className="text-center py-0 font-medium px-6 md:px-24 text-white text-lg md:text-2xl">
         DATA STRUCTURES AND ALGORITHMS || C / C++ Programming Language || MERN Stack Development || Leadership and Team Management</p>
 
       <div className="px-14 md:px-28 py-12">
         <p className="text-gradient3 text-center md:text-left text-4xl font-bold">What Services I Bring?</p>
-        <div className="flex justify-center flex-nowrap max-lg:flex-wrap max-lg:justify-center gap-12 pt-12">
+        <div className="flex justify-center px-10 flex-nowrap max-lg:flex-wrap max-lg:justify-center gap-12 pt-12">
           <Card />
 
         </div>
@@ -230,14 +230,14 @@ export default function Home() {
         <Link href='/projects' className="my-6 rounded text-center  bg-white	px-12 py-2 text-xl font-bold">View Projects</Link>
       </div>
 
-      <div className="px-14 md:px-28 py-12 flex justify-between items-center flex-wrap max-lg:flex-wrap max-lg:justify-center gap-12 pt-12">
+      <div className="px-14 md:px-28 py-12 flex justify-between items-center flex-wrap max-lg:flex-wrap max-lg:justify-center gap-2 md:gap-12 pt-12">
         <p className="text-gradient3 text-3xl py-8 font-bold ">Coding Stats</p>
         <Link target='_blank' href='https://leetcode.com/u/ayushii06/'>
           <Image src={leetcode} height={42} className='hover:scale-110 transition-duration-500' />
         </Link>
       </div>
 
-      <div className="flex flex-wrap items-center justify-around md:mx-28 mx-12">
+      <div className="flex flex-wrap items-center justify-around md:mx-28 mx-6">
         <CircularProgress
           total={data}
           completed={data.completed}
@@ -245,7 +245,7 @@ export default function Home() {
         />
 
         <div className="md:w-6/12 w-9/12">
-          <p className="text-center md:text-2xl text-lg md:py-0 py-12 font-extrabold text-white pb-6 ">Topics Covered</p>
+          <p className="text-center text-2xl md:py-8 py-12 font-extrabold text-white pb-6 ">Topics Covered</p>
           <div className="flex flex-wrap items-center justify-center  gap-5">
             <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Array</p>
             <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Math</p>
@@ -270,35 +270,35 @@ export default function Home() {
       <p className="text-gradient3 text-3xl  font-bold px-14 md:px-28 md:text-start text-center py-12">Certificates</p>
 
       <div className="flex flex-wrap items-center justify-center mx-14 ">
-        <div class="max-w-sm relative w-8/12 h-auto ">
+        <div class="max-w-sm relative w-12/12 h-auto ">
           <Image src={cer1} alt="image" class="w-full max-w-sm  h-auto relative z-0" />
           <span class=" absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-20 ">
 
           </span>
         </div>
 
-        <div class="relative max-w-sm w-8/12 h-auto ">
+        <div class="relative max-w-sm w-12/12 h-auto ">
           <Image src={cer2} alt="image" class="w-full max-w-sm  h-auto relative z-0" />
           <span class=" absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-20 ">
 
           </span>
         </div>
 
-        <div class="md:w-72 w-20 relative max-w-sm  h-auto ">
+        <div class="md:w-72 w-full relative max-w-sm  h-auto ">
           <Image src={cer3} alt="image" class="w-full max-w-sm  h-auto relative z-0" />
           <span class=" absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-20 ">
 
           </span>
         </div>
 
-        <div class="w-6/12 relative max-w-sm  h-auto ">
+        <div class="w-12/12 relative max-w-sm  h-auto ">
           <Image src={cer4} alt="image" class="w-full max-w-sm  h-auto relative z-0" />
           <span class=" absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-20 ">
 
           </span>
         </div>
 
-        <div  class="relative w-8/12 max-w-sm  h-auto ">
+        <div  class="relative w-12/12 max-w-sm  h-auto ">
           <Image src={cer5} alt="image" class="w-full max-w-sm  h-auto relative z-0" />
           <span class=" absolute w-full h-full top-0 left-0 bg-black opacity-0 z-10 transition-opacity duration-300 hover:opacity-20 ">
 

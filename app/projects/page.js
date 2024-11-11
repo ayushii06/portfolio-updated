@@ -12,7 +12,7 @@ export default function projects(){
                 {
                     projectData.map((item, index) => {
                         return (
-                            <ProjectCard key={index} id={item.id} title={item.title} desc={item.desc} date={item.date} image={item.image} preview={item.preview}/>
+                            <ProjectCard key={index} id={item.id} title={item.title} desc={item.desc} date={item.date} video={item.video} image={item.image} preview={item.preview}/>
                         )
                     })
                 }
