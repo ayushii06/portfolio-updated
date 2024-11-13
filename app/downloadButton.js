@@ -1,7 +1,7 @@
 'use client';
 export default function DownloadButton() {
     const handelDownload = () => {
-        window.open('https://drive.google.com/file/d/19Xsm0eVxHsBCMU4jYI0zb45JEhRvWsUJ/view?usp=sharing', '_blank');
+        window.open('https://drive.google.com/file/d/1uNiVyeIIq1QcM93JHKLVfviLfSY95pfu/view?usp=sharing', '_blank');
     }
 
     return (
