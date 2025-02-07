@@ -42,15 +42,15 @@ import cer5 from './public/certificates/5.jpeg'
 export default function Home() {
 
   const data = {
-    total: 3352,
-    easy: 834,
-    medium: 1753,
-    hard: 765,
-    completed: 103,
+    total: 3445,
+    easy: 856,
+    medium: 1793,
+    hard: 796,
+    completed: 253,
     levels: {
-      easy: 56,
-      medium: 45,
-      hard: 2
+      easy: 95,
+      medium: 144,
+      hard: 14
     }
   };
 
@@ -251,12 +251,18 @@ export default function Home() {
             <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Math</p>
             <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">String</p>
             <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Sorting</p>
-            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Linked List</p>
-            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Stack</p>
+            <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Two-Pointers</p>
+            <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Matrix</p>
+            <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Linked List</p>
+            <p style={{ background: 'rgb(33 161 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Stack</p>
             <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Tree</p>
             <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Binary Tree</p>
             <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Graph</p>
             <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">B.F.S. / D.F.S</p>
+            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Bit Manipulation</p>
+            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Hashing</p>
+            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Sliding Window</p>
+            <p style={{ background: 'rgb(243 87 15)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Prefix Sum</p>
             <p style={{ background: 'rgb(200 0 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Recursion</p>
             <p style={{ background: 'rgb(200 0 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Backtracking</p>
             <p style={{ background: 'rgb(200 0 0)' }} className="font-bold text-white md:px-4 px-2 py-2 rounded-lg">Dynamic Programming</p>
