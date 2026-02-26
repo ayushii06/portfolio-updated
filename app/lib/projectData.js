@@ -7,6 +7,7 @@ const projectData = [
     {
     id: 1,
     name: "AI Face Recognition Attendance System",
+    desc: "",
     slug: "ai-face-recognition-attendance",
     duration: "Nov 2024 – Dec 2025",
     stacks: [
@@ -18,6 +19,14 @@ const projectData = [
       "Azure",
     ],
     image: Image1,
+    description: {
+      why: "This project helps automate attendance using facial recognition and geolocation tracking.",
+      how: "Built using DeepFace for recognition, MongoDB for embeddings storage and React frontend.",
+      techStack: "Next.js, Node.js, MongoDB, DeepFace, TailwindCSS",
+      difficulties: "Optimizing face comparison to avoid scanning entire dataset.",
+      learnings: "Learned embedding comparison and performance optimization.",
+      next: "Improve real-time accuracy and reduce latency."
+    },
     github: "https://github.com/ayushii06/Attendance-App",
     live: "https://attendance-app-olive.vercel.app/"
   },
@@ -34,6 +43,14 @@ const projectData = [
       "JWT"
     ],
     image: Image2,
+    description: {
+      why: "This project helps automate attendance using facial recognition and geolocation tracking.",
+      how: "Built using DeepFace for recognition, MongoDB for embeddings storage and React frontend.",
+      techStack: "Next.js, Node.js, MongoDB, DeepFace, TailwindCSS",
+      difficulties: "Optimizing face comparison to avoid scanning entire dataset.",
+      learnings: "Learned embedding comparison and performance optimization.",
+      next: "Improve real-time accuracy and reduce latency."
+    },
     github: "https://github.com/ayushii06/drawTool",
     live: "https://draw-tool-seven.vercel.app"
   },
@@ -52,6 +69,14 @@ const projectData = [
       "APIs"
     ],
     image: Image3,
+    description: {
+      why: "This project helps automate attendance using facial recognition and geolocation tracking.",
+      how: "Built using DeepFace for recognition, MongoDB for embeddings storage and React frontend.",
+      techStack: "Next.js, Node.js, MongoDB, DeepFace, TailwindCSS",
+      difficulties: "Optimizing face comparison to avoid scanning entire dataset.",
+      learnings: "Learned embedding comparison and performance optimization.",
+      next: "Improve real-time accuracy and reduce latency."
+    },
     github: "https://github.com/ayushii06/GeminiMatch",
     live: ""
   },
@@ -71,6 +96,15 @@ const projectData = [
       "JWT"
     ],
     image: Image4,
+    description: {
+      why: "This project helps automate attendance using facial recognition and geolocation tracking.",
+      how: "Built using DeepFace for recognition, MongoDB for embeddings storage and React frontend.",
+      techStack: "Next.js, Node.js, MongoDB, DeepFace, TailwindCSS",
+      difficulties: "Optimizing face comparison to avoid scanning entire dataset.",
+      learnings: "Learned embedding comparison and performance optimization.",
+      next: "Improve real-time accuracy and reduce latency."
+    },
+
     github: "https://github.com/ayushii06/ForTheFuture-Frontend",
     live: "https://forthefuture.onrender.com/"
   },

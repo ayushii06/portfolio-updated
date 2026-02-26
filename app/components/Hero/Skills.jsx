@@ -9,7 +9,7 @@ function Skills() {
     <>
     <IntroText text={"My core stack revolves around building modern, scalable full-stack applications with these technologies."}/>
       
-      <div className="py-8 w-[80%] md:w-1/2 mx-auto text-center">
+      <div className="py-8 w-[80%] md:w-1/2 mx-auto text-left">
         {skills.map((skillItem) => (
           <div key={skillItem.id}>
             <p className="pb-6 pt-6 text-white font-semibold">

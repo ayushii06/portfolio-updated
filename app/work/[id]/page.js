@@ -1,54 +1,132 @@
-'use client'
+"use client";
 
-import {usePathname} from "next/navigation";
-import {projectData} from '../../lib/projectData'
+import { usePathname } from "next/navigation";
+import { projectData } from "../../lib/projectData";
 
-export default function ProjectDesc(){
-    const pathname = usePathname();
+import { motion } from "framer-motion";
+import { Github, Link } from "lucide-react";
 
-    const id = pathname.split('/').pop();
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
-    //1st data 
-    const id_find = id-1;
+function Section({ title, content }) {
+  return (
+    <div className="mb-8">
+      <h3 className="text-base sm:text-lg font-semibold
+                     text-white/90 mb-3 tracking-wide">
+        {title}
+      </h3>
 
-    const project = projectData[id_find];
+      <p className="text-sm sm:text-[15px]
+                    text-white/70 leading-relaxed
+                    max-w-3xl">
+        {content}
+      </p>
+    </div>
+  );
+}
 
-    return (
-        <>
-        {
-            project ? (
-               <div className="text-center my-12 ">
-                <p style={{   "text-shadow":" 0 0 5px #14ebf1, 0 0 15px #126688, 0 0 20px #063aa4, 0 0 40px #405eff, 0 0 60px #6dd3ff, 0 0 10px #36acff, 0 0 98px #b91fff",
-    "-webkit-text-stroke": "#00f4ff"}} className="max-sm:text-4xl text-5xl w-8/12 mx-auto text-white font-bold mb-16">{project.title}</p>
-                <p className=" max-sm:text-4xl text-center text-4xl mb-8 px-16 font-bold text-gradient3">Tech Stack</p>
-                <p className="max-sm:text-lg max-sm:px-6 text-white text-center font-medium text-2xl">{project.techStack}</p>
-                <p className="text-white mb-16 px-16 font-medium">{project.summary}</p>
+export default function ProjectDesc() {
+  const pathname = usePathname();
 
-                {project.video && <>
-                <p className="max-sm:text-4xl text-center text-4xl mb-8 px-16 font-bold text-gradient3">Video</p>
-                <div className="flex justify-center">
-                    <video src={project
-                    .video} controls className="w-8/12"></video>
-                </div>
-                </> }
-                <p className="max-sm:text-4xl text-center text-white mb-16 px-4 text-5xl text-extrabold " style={{   "text-shadow":" 0 0 5px #14ebf1, 0 0 15px #126688, 0 0 20px #063aa4, 0 0 40px #405eff, 0 0 60px #6dd3ff, 0 0 10px #36acff, 0 0 98px #b91fff",
-    "-webkit-text-stroke": "#00f4ff"}}>GALLERY</p>
+  const id = pathname.split("/").pop();
 
-                <div className="flex flex-wrap gap-4  justify-center">
-                   {
-                          project.img.map((image, index) => {
-                            return (
-                                 <img key={index} src={image} className="px-12 md:p-0 md:w-5/12 md:h-7/12 object-cover" />
-                            )
-                          })
-                   }
-                </div>
+  //1st data
+  const id_find = id - 1;
 
-               </div> ) :(
-                <div className="text-center my-48 text-5xl font-bold text-white">Project Not Found</div>
-               )
-    
-        }
-        </>
-    )
+  const project = projectData[id_find];
+
+  return (
+    <>
+       <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="group w-full max-w-5xl mx-auto
+                 bg-white/5 backdrop-blur-md
+                 border mb-24 border-white/10
+                 rounded-2xl
+                 p-6 sm:p-8 md:p-10
+                 transition-all duration-500
+                 hover:border-blue-500/40
+                 hover:-translate-y-1"
+    >
+      {/* Header */}
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center
+                      gap-6 border-b border-white/10 pb-6 mb-8">
+        
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight
+                       bg-gradient-to-r from-white via-white/90 to-white/70
+                       bg-clip-text text-transparent">
+          {project.name}
+        </h2>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a
+            href={project.github}
+            target="_blank"
+            className="px-5 flex justify-center items-center gap-2 cursor-pointer py-2 text-sm font-medium rounded-lg
+                       bg-white/5 border border-white/20
+                       backdrop-blur-md
+                       hover:border-blue-400/60
+                       hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]
+                       transition-all duration-300 text-center"
+          >
+            <Github width={14} height={14}/>
+            Source Code
+          </a>
+
+          <a
+            href={project.live}
+            target="_blank"
+            className="px-5 flex justify-center items-center gap-2 cursor-pointer py-2 text-sm font-medium rounded-lg
+                       bg-white/5 border border-white/20
+                       backdrop-blur-md
+                       hover:border-blue-400/60
+                       hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]
+                       transition-all duration-300 text-center"
+          >
+            <Link width={14} height={14}/>
+           Live Link
+          </a>
+        </div>
+      </div>
+
+      {/* Tech Stack Pills */}
+      <div className="flex flex-wrap gap-3 mb-10">
+        {project.stacks.map((tech, index) => (
+          <span
+            key={index}
+            className="px-4 py-1.5 text-xs font-medium
+                       rounded-full
+                       bg-white/5 border border-white/20
+                       hover:border-blue-400/50
+                       hover:bg-blue-500/10
+                       transition-all duration-300"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
+
+      {/* Sections */}
+      <Section title="Why I built this project?" content={project.description.why} />
+      <Section title="How I built this?" content={project.description.how} />
+      <Section title="Tech Stack" content={project.description.techStack} />
+      <Section title="Difficulties I faced" content={project.description.difficulties} />
+      <Section title="Learnings" content={project.description.learnings} />
+      <Section title="What's Next?" content={project.description.next} />
+    </motion.div>
+    </>
+  );
 }

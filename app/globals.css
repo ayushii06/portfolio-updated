@@ -30,25 +30,3 @@ body {
   75% { transform: rotate(10deg); }
   100% { transform: rotate(0deg); }
 }
-
-/* .text-gradient1{
-  background: linear-gradient(to right, #F2F241, #EF33BD);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text-gradient2{
-  background: linear-gradient(to right, #FF7777, #55EA3B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text-gradient3{
-  background: linear-gradient(282deg, #0aef18, #ffe400);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.gradient-btn{
-  background:linear-gradient(to right, #D39B18, #A06800 , #FF2EA8);
-} */
