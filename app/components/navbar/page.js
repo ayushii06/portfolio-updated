@@ -1,86 +1,108 @@
-'use client'
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import logo from '../../public/logo.png'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import menu from  '../../public/menu.png'
-import cross from '../../public/cross.svg'
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Home, Briefcase, BookOpen, Mail } from "lucide-react";
 
-
-function page() {
-  const pathname = usePathname()
-
-  const handleClick = () => {
-    const nav = document.querySelector('.nav')
-    document.querySelector('.icon').style.display = 'none'
-    nav.classList.toggle('hidden')
-  }
-
-  const handleCrossClick = () => {
-    const nav = document.querySelector('.nav')
-    document.querySelector('.icon').style.display = 'block'
-    nav.classList.toggle('hidden')
-  }
+function Navbar() {
+  const pathname = usePathname();
 
   const links = [
-    {
-      name: 'Home',
-      href: '/',
-    },
-    {
-      name: 'My Work',
-      href: '/projects',
-    },
-  ]
-  return (
-    <>
-    <div className="text-xl	font-bold	 flex flex-row justify-between text-white p-8">
-        <div className="logo"><Image className="" height={32} weight={32} src={logo} /></div>
-        <div className="flex flex-row gap-x-8">
-        {links.map((link) => {
-        return (
-          <Link
-            key={link.name}
-            href={link.href}
-            className={
-              pathname === link.href
-                ? ' text-yellow-400	'
-                : 'text-white'
-            }
-          >
-            <p className="hidden md:block">{link.name}</p>
-          </Link>
-        );
-      })}
-                  </div>
-        <div className="md:hidden icon" style={{'width':'6%'}}>
-          <Image src={menu} onClick={handleClick}/>
-        </div>
+  { name: "Home", href: "/", icon: Home },
+  { name: "Work", href: "/work", icon: Briefcase },
+  { name: "Blogs", href: "/blogs", icon: BookOpen },
+  { name: "Contact", href: "/contact", icon: Mail },
+];
 
-        <div style={{"zIndex":"2","position":"absolute","top":"2px",
-        "right":"-2px","padding": "25px 27px","background": "#282828","transition": "1s left"}} className="nav hidden bg-transparent md:hidden flex-row px-4 gap-x-8">
-          <Image src={cross } width={25} className='' onClick={handleCrossClick}/>
+  const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    let lastScroll = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+   <nav
+  className={`fixed 
+  bottom-auto 
+  top-6
+  inset-x-0 flex justify-center 
+  z-50
+  transition-transform duration-300
+  ${showNav ? "translate-y-0" : "-translate-y-[150%]"}`}
+>
+      {/* Glass Container */}
+      <div className="bg-[#0f172a]/80 backdrop-blur-xl border border-white/10 
+shadow-[0_8px_30px_rgba(0,0,0,0.4)] 
+rounded-full px-8 py-3 
+flex items-center justify-between sm:justify-center gap-8">
+        {/* Desktop Links */}
+        <div className="hidden sm:flex md:flex  items-center gap-10 text-sm font-medium">
           {links.map((link) => {
+            const isActive = pathname === link.href;
+
             return (
-              <Link
-                key={link.name}
-                href={link.href}
-                className={
-                  pathname === link.href
-                    ? ' text-yellow-400	'
-                    : 'text-white'
-                }
-              >
-                <p>{link.name}</p>
+              <Link key={link.name} href={link.href} className="relative group">
+                <span
+                  className={` w-full transition-colors duration-300 ${
+                    isActive ? "text-white" : "text-gray-400"
+                  } group-hover:text-white`}
+                >
+                  {link.name}
+                </span>
+
+                {/* Animated Underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] w-full bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                />
               </Link>
-            ); 
+            );
           })}
         </div>
-    </div>
-    </>
-  )
+
+        {/* Mobile Instagram Style */}
+  {/* Mobile Instagram Dock */}
+        <div className="flex sm:hidden items-center justify-between gap-8 ">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+
+            return (
+               <Link key={link.name} href={link.href} className="relative group">
+                <span
+                  className={` w-full transition-colors duration-300 ${
+                    isActive ? "text-white" : "text-gray-400"
+                  } group-hover:text-white`}
+                >
+                  {link.name}
+                </span>
+
+                {/* Animated Underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] w-full bg-gradient-to-r from-blue-500 to-purple-500 transform origin-left transition-transform duration-300 ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                />
+              </Link>
+            )
+          })}
+        </div>
+
+       </div>
+       </nav>
+  );
 }
 
-export default page
+export default Navbar;

@@ -1,56 +1,128 @@
-import star from '../../public/star.png'
-import Image from 'next/image'
-import Link from 'next/link'
+"use client";
 
+import { Github, Linkedin, Mail, ArrowUpRight, LucideYoutube } from "lucide-react";
+import logo from '../../favicon.ico'
+import Image from "next/image";
 
-export default function page() {
+export default function Footer() {
   return (
-    <>
-    <div className="px-6 md:px-28 py-20 ">
-     <p className="text-gradient3 text-3xl font-bold ">Follow Me</p>
-     <div className="flex flex-wrap my-12 gap-12">
-      <Link target='_blank' href='https://github.com/ayushii06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px yellow;"}}>GITHUB</Link>
-      <Link target='_blank' href='https://www.linkedin.com/in/ayushi-pal-99965b249/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #45C9F8;"}}>LINKEDIN</Link>
-      <Link target='_blank' href='https://leetcode.com/u/ayushii06/' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #F5710B;"}}>LEETCODE</Link>
-      <Link target='_blank' href='https://medium.com/@ayushipal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #FFFFFF;"}}>MEDIUM</Link>
-      <Link target='_blank' href='https://x.com/ayushi_pal06' className="text-3xl md:text-5xl font-bold text-transparent" style={{"-webkit-text-stroke": "1px #00FF00;"}}>X</Link>
+    <footer className="relative bg-[#0b0f19] text-white overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -top-40 -right-40"></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20 pb-10">
+
+        {/* Top Section */}
+        <div className="grid md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
+
+          <div>
+            <div className="flex mb-4 justify-start gap-2 items-center">
+            <Image alt="Logo" src={logo} width={32} height={32}/>
+            <h2 className="text-2xl font-bold ">Ayushi Pal</h2>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              Building intelligent systems, scalable web applications,
+              and thoughtful digital experiences.
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h3 className="text-sm uppercase tracking-widest text-blue-400 mb-4">
+              Navigation
+            </h3>
+            <ul className="space-y-3 text-gray-400">
+              <li>
+                <a href="/" className="hover:text-white transition">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/proof-of-work" className="hover:text-white transition">
+                  Proof of Work
+                </a>
+              </li>
+              <li>
+                <a href="/blogs" className="hover:text-white transition">
+                  Blogs
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="text-sm uppercase tracking-widest text-blue-400 mb-4">
+              Connect
+            </h3>
+
+            <div className="space-y-4">
+
+              <a
+                href="https://github.com/ayushii06"
+                target="_blank"
+                className="flex items-center justify-between group text-gray-400 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <Github className="h-5 w-5" />
+                  GitHub
+                </div>
+                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition" />
+              </a>
+
+              <a
+                href="https://linkedin.com/in/ayushii06"
+                target="_blank"
+                className="flex items-center justify-between group text-gray-400 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <Linkedin className="h-5 w-5" />
+                  LinkedIn
+                </div>
+                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition" />
+              </a>
+
+              <a
+                href="mailto:your@email.com"
+                className="flex items-center justify-between group text-gray-400 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5" />
+                  Email
+                </div>
+                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition" />
+              </a>
+              <a
+                href="https://youtube.com/@shecode06?si=a_Or_rmGlI6NeKFi"
+                target="_blank"
+                className="flex items-center justify-between group text-gray-400 hover:text-white transition"
+              >
+                <div className="flex items-center gap-3">
+                  <LucideYoutube className="h-5 w-5" />
+                  Youtube
+                </div>
+                <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition" />
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} Ayushi Pal. Built with Next.js.</p>
+          <p className="mt-4 md:mt-0">
+            Designed & Developed with intention ✨
+          </p>
+        </div>
+
       </div>
-      
-      <div className="flex  gap-6 items-center mt-20 ">
-        <Image src={star} width={25} />
-        <p className="font-medium text-lg md:text-2xl text-white">Over <b>100+ DSA </b>Questions on Leetcode</p>
-      </div>
-
-      <div className="flex  gap-6 items-center my-8 ">
-        <Image src={star} width={25} />
-        <p className="font-medium text-lg md:text-2xl text-white">Selected as a <b>Microsoft Learn Student Ambassador</b></p>
-      </div>
-
-
-      <div className="flex  gap-6 items-center my-8 ">
-        <Image src={star} width={25} />
-        <p className="font-medium text-lg md:text-2xl text-white">300+ Contributions on GITHUB</p>
-      </div>
-
-
-      <div className="flex  gap-6 items-center my-8 ">
-        <Image src={star} width={25} />
-        <p className="font-medium text-lg md:text-2xl text-white">Participated in many Hackathons and Coding Challenges</p>
-      </div>
-
-     </div>
-
-     
-
-     <hr className='py-6'/>
-
-     <div className="flex text-center max-sm:flex-wrap max-sm:gap-12 justify-evenly max-sm:px-16 px-18">
-        <Link href='/projects' className="text-white font-lg">View Projects</Link>
-        <p className="text-white font-lg">ayushipal06@gmail.com</p>
-        <Link href='/services' className="text-white font-lg">Request Services</Link>
-     </div>
-
-     <div className="text-slate-300 text-center pt-12 py-4 italic">© Copyright 2024 Ayushi Pal </div>
-     </>
-  )
+    </footer>
+  );
 }
