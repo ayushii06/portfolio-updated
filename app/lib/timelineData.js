@@ -1,5 +1,7 @@
 import RGIPT from "../public/rgipt.png";
+import bg1 from "../public/rgipt_bg.jpg";
 import school from "../public/school.png";
+import bg2 from "../public/school_bg.jpg";
 
 const experience = [
   {
@@ -26,6 +28,7 @@ const experience = [
       "Member of CDC Cell of college representing my branch",
       "Won silver in Badminton singles and silver in TT Doubles",
     ],
+    background:bg1,
   },
   {
     id:1,
@@ -43,10 +46,11 @@ const experience = [
       "Physical Education",
     ],
     marksheet:
-      "https://drive.google.com/file/d/1sV_yG_1r2YgBMzx56T22fpBoRz1VtEOr/view?usp=sharing",
+    "https://drive.google.com/file/d/1sV_yG_1r2YgBMzx56T22fpBoRz1VtEOr/view?usp=sharing",
     coCurricular: [
       "Cleared JEE Advanced 2022, National Level College Entrance Examination with a rank of 22k among 2L candidates",
     ],
+    background:bg2,
   },
   {
     id:2,
@@ -64,13 +68,14 @@ const experience = [
       "Information Technology",
     ],
     marksheet:
-      "https://drive.google.com/file/d/1IUHQHdBsNIxqEwRnqgjj2E_HnIY5nlVC/view?usp=sharing",
+    "https://drive.google.com/file/d/1IUHQHdBsNIxqEwRnqgjj2E_HnIY5nlVC/view?usp=sharing",
     coCurricular: [
       "School Rank 2 and awarded scholarship worth 5,000 INR",
       "Won a Debate Competition for my House on `Indian History`",
       "Gave Speeches on Various Ocassions",
       "Led School Morning Assembly on every wednesday",
     ],
+    background:bg2,
   },
 ];
 

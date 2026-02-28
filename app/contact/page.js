@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Github, Linkedin, Mail, Send, YoutubeIcon } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -42,9 +42,9 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center  text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center  text-white overflow-hidden sm:mt-20 mt-32">
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6  pb-12 grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-6  pb-12 grid md:grid-cols-2 sm:gap-16 gap-4 items-center">
 
         {/* Left Side Content */}
         <div>

@@ -5,15 +5,11 @@ import DSA from "./components/Hero/DSA";
 import Projects from "./components/Hero/Projects";
 import ExtraCurricular from "./components/Hero/ExtraCurricular";
 import Seperator from "./components/ui/Seperator";
-import IntroText from "./components/ui/IntroText";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      
-      <IntroText text={"Those who are motivated only by the desire for the fruit of action are miserable, for they are constantly anxious about the results of what they do."}/>
-     
+      <Hero />     
 
       <Seperator text={"My Education"}/>
       <Timeline />
