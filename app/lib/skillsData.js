@@ -18,6 +18,7 @@ import web24 from "../public/skills/ts.png";
 import web25 from "../public/skills/sql.png";
 import web26 from "../public/skills/materialUI.png";
 import web27 from "../public/skills/clerk.svg";
+import web28 from "../public/skills/postgreSQL.png";
 
 const skills = [
   {
@@ -58,7 +59,7 @@ const skills = [
     skill: "Database",
     tech: [
       { id: 401, logo: web7, name: "MongoDB" },
-      { id: 402, logo: web3, name: "PostgreSQL" },
+      { id: 402, logo: web28, name: "PostgreSQL" },
     ],
   },
   {
